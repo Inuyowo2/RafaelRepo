@@ -33,16 +33,17 @@ Partial Class Form1
         Me.txtfname = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.MySqlCommand1 = New MySql.Data.MySqlClient.MySqlCommand()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtfirst = New System.Windows.Forms.TextBox()
-        Me.txtlast = New System.Windows.Forms.TextBox()
-        Me.txtstudcourse = New System.Windows.Forms.TextBox()
-        Me.btnsearch = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.txtuserid = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.btnsearch = New System.Windows.Forms.Button()
+        Me.txtstudcourse = New System.Windows.Forms.TextBox()
+        Me.txtlast = New System.Windows.Forms.TextBox()
+        Me.txtfirst = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.MySqlCommand1 = New MySql.Data.MySqlClient.MySqlCommand()
+        Me.btndisplay = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -153,69 +154,12 @@ Partial Class Form1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "GroupBox2"
         '
-        'MySqlCommand1
+        'txtuserid
         '
-        Me.MySqlCommand1.CacheAge = 0
-        Me.MySqlCommand1.Connection = Nothing
-        Me.MySqlCommand1.EnableCaching = False
-        Me.MySqlCommand1.Transaction = Nothing
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(13, 166)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(40, 13)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Course"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(13, 120)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(58, 13)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Last Name"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(13, 76)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(57, 13)
-        Me.Label6.TabIndex = 7
-        Me.Label6.Text = "First Name"
-        '
-        'txtfirst
-        '
-        Me.txtfirst.Location = New System.Drawing.Point(128, 76)
-        Me.txtfirst.Name = "txtfirst"
-        Me.txtfirst.Size = New System.Drawing.Size(100, 20)
-        Me.txtfirst.TabIndex = 10
-        '
-        'txtlast
-        '
-        Me.txtlast.Location = New System.Drawing.Point(128, 115)
-        Me.txtlast.Name = "txtlast"
-        Me.txtlast.Size = New System.Drawing.Size(100, 20)
-        Me.txtlast.TabIndex = 11
-        '
-        'txtstudcourse
-        '
-        Me.txtstudcourse.Location = New System.Drawing.Point(128, 161)
-        Me.txtstudcourse.Name = "txtstudcourse"
-        Me.txtstudcourse.Size = New System.Drawing.Size(100, 20)
-        Me.txtstudcourse.TabIndex = 12
-        '
-        'btnsearch
-        '
-        Me.btnsearch.Location = New System.Drawing.Point(83, 199)
-        Me.btnsearch.Name = "btnsearch"
-        Me.btnsearch.Size = New System.Drawing.Size(91, 32)
-        Me.btnsearch.TabIndex = 13
-        Me.btnsearch.Text = "Search"
-        Me.btnsearch.UseVisualStyleBackColor = True
+        Me.txtuserid.Location = New System.Drawing.Point(128, 37)
+        Me.txtuserid.Name = "txtuserid"
+        Me.txtuserid.Size = New System.Drawing.Size(100, 20)
+        Me.txtuserid.TabIndex = 15
         '
         'Label7
         '
@@ -226,12 +170,79 @@ Partial Class Form1
         Me.Label7.TabIndex = 14
         Me.Label7.Text = "Student ID"
         '
-        'txtuserid
+        'btnsearch
         '
-        Me.txtuserid.Location = New System.Drawing.Point(128, 37)
-        Me.txtuserid.Name = "txtuserid"
-        Me.txtuserid.Size = New System.Drawing.Size(100, 20)
-        Me.txtuserid.TabIndex = 15
+        Me.btnsearch.Location = New System.Drawing.Point(83, 199)
+        Me.btnsearch.Name = "btnsearch"
+        Me.btnsearch.Size = New System.Drawing.Size(91, 32)
+        Me.btnsearch.TabIndex = 13
+        Me.btnsearch.Text = "Search"
+        Me.btnsearch.UseVisualStyleBackColor = True
+        '
+        'txtstudcourse
+        '
+        Me.txtstudcourse.Location = New System.Drawing.Point(128, 161)
+        Me.txtstudcourse.Name = "txtstudcourse"
+        Me.txtstudcourse.Size = New System.Drawing.Size(100, 20)
+        Me.txtstudcourse.TabIndex = 12
+        '
+        'txtlast
+        '
+        Me.txtlast.Location = New System.Drawing.Point(128, 115)
+        Me.txtlast.Name = "txtlast"
+        Me.txtlast.Size = New System.Drawing.Size(100, 20)
+        Me.txtlast.TabIndex = 11
+        '
+        'txtfirst
+        '
+        Me.txtfirst.Location = New System.Drawing.Point(128, 76)
+        Me.txtfirst.Name = "txtfirst"
+        Me.txtfirst.Size = New System.Drawing.Size(100, 20)
+        Me.txtfirst.TabIndex = 10
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(13, 166)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(40, 13)
+        Me.Label4.TabIndex = 9
+        Me.Label4.Text = "Course"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(13, 76)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(57, 13)
+        Me.Label6.TabIndex = 7
+        Me.Label6.Text = "First Name"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(13, 120)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(58, 13)
+        Me.Label5.TabIndex = 8
+        Me.Label5.Text = "Last Name"
+        '
+        'MySqlCommand1
+        '
+        Me.MySqlCommand1.CacheAge = 0
+        Me.MySqlCommand1.Connection = Nothing
+        Me.MySqlCommand1.EnableCaching = False
+        Me.MySqlCommand1.Transaction = Nothing
+        '
+        'btndisplay
+        '
+        Me.btndisplay.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btndisplay.Location = New System.Drawing.Point(45, 321)
+        Me.btndisplay.Name = "btndisplay"
+        Me.btndisplay.Size = New System.Drawing.Size(150, 47)
+        Me.btndisplay.TabIndex = 3
+        Me.btndisplay.Text = "Display By Course"
+        Me.btndisplay.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -239,6 +250,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(658, 450)
+        Me.Controls.Add(Me.btndisplay)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox1)
@@ -274,4 +286,5 @@ Partial Class Form1
     Friend WithEvents btnsearch As Button
     Friend WithEvents txtuserid As TextBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents btndisplay As Button
 End Class

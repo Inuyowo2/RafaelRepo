@@ -13,4 +13,9 @@
     Private Sub btnsearch_Click(sender As Object, e As EventArgs) Handles btnsearch.Click
         SearchData()
     End Sub
+
+    Private Sub btndisplay_Click(sender As Object, e As EventArgs) Handles btndisplay.Click
+        Form2.Show()
+        Me.Hide()
+    End Sub
 End Class

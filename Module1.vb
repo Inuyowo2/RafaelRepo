@@ -9,6 +9,9 @@ Module Module1
     Dim mysqlcmd As New MySqlCommand
     Dim host, uname, pwd, dbname As String
     Dim sqlquery As String
+    Dim dtTable As New DataTable
+    Dim adapter As New MySqlDataAdapter
+
     Public Sub ConnectDbase()
         host = "127.0.0.1"
         dbname = "cs2aoop"
@@ -76,4 +79,22 @@ Module Module1
             reader.Close()
         End Try
     End Sub
+    Public Sub LoadAllData()
+        sqlquery = "SELECT * FROM student"
+        adapter = New MySqlDataAdapter(sqlquery, con)
+        Try
+            ' display record in data grid view
+            dtTable = New DataTable
+            adapter.Fill(dtTable) ' pass record from mysql to datatable
+            With Form2.dgvdata
+                .DataSource = dtTable
+                .AutoResizeColumns()
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            con.Close()
+        End Try
+    End Sub
+
 End Module
