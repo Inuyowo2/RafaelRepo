@@ -11,7 +11,7 @@ Module Module1
     Dim sqlquery As String
     Dim dtTable As New DataTable
     Dim adapter As New MySqlDataAdapter
-
+    Dim testtext As String
     Public Sub ConnectDbase()
         host = "127.0.0.1"
         dbname = "cs2aoop"
