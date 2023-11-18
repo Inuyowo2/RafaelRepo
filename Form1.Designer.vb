@@ -42,8 +42,10 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.MySqlCommand1 = New MySql.Data.MySqlClient.MySqlCommand()
         Me.btndisplay = New System.Windows.Forms.Button()
+        Me.MySqlCommand1 = New MySql.Data.MySqlClient.MySqlCommand()
+        Me.btnupdate = New System.Windows.Forms.Button()
+        Me.btndelete = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -138,6 +140,8 @@ Partial Class Form1
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupBox2.Controls.Add(Me.btndelete)
+        Me.GroupBox2.Controls.Add(Me.btnupdate)
         Me.GroupBox2.Controls.Add(Me.txtuserid)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.btnsearch)
@@ -227,13 +231,6 @@ Partial Class Form1
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Last Name"
         '
-        'MySqlCommand1
-        '
-        Me.MySqlCommand1.CacheAge = 0
-        Me.MySqlCommand1.Connection = Nothing
-        Me.MySqlCommand1.EnableCaching = False
-        Me.MySqlCommand1.Transaction = Nothing
-        '
         'btndisplay
         '
         Me.btndisplay.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -243,6 +240,31 @@ Partial Class Form1
         Me.btndisplay.TabIndex = 3
         Me.btndisplay.Text = "Display By Course"
         Me.btndisplay.UseVisualStyleBackColor = True
+        '
+        'MySqlCommand1
+        '
+        Me.MySqlCommand1.CacheAge = 0
+        Me.MySqlCommand1.Connection = Nothing
+        Me.MySqlCommand1.EnableCaching = False
+        Me.MySqlCommand1.Transaction = Nothing
+        '
+        'btnupdate
+        '
+        Me.btnupdate.Location = New System.Drawing.Point(0, 228)
+        Me.btnupdate.Name = "btnupdate"
+        Me.btnupdate.Size = New System.Drawing.Size(75, 23)
+        Me.btnupdate.TabIndex = 16
+        Me.btnupdate.Text = "Update"
+        Me.btnupdate.UseVisualStyleBackColor = True
+        '
+        'btndelete
+        '
+        Me.btndelete.Location = New System.Drawing.Point(175, 229)
+        Me.btndelete.Name = "btndelete"
+        Me.btndelete.Size = New System.Drawing.Size(71, 22)
+        Me.btndelete.TabIndex = 17
+        Me.btndelete.Text = "Delete"
+        Me.btndelete.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -287,4 +309,6 @@ Partial Class Form1
     Friend WithEvents txtuserid As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents btndisplay As Button
+    Friend WithEvents btndelete As Button
+    Friend WithEvents btnupdate As Button
 End Class
