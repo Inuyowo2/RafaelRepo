@@ -128,12 +128,12 @@ Module Module1
                 cmd.Parameters.AddWithValue("@fname", fname)
                 cmd.Parameters.AddWithValue("@lname", lname)
                 cmd.Parameters.AddWithValue("@course", course)
-                cmd.Parameters.AddWithValue("@stuidID", studID)
+                cmd.Parameters.AddWithValue("@studID", studID)
                 cmd.ExecuteNonQuery()
                 MsgBox("Update Success", vbInformation, "Update Message")
             End Using
         Catch ex As Exception
-            MsgBox("Error: " & ex.Message, vbInformation, "Error Message")
+            MsgBox("Error: " & ex.InnerException.Message, vbInformation, "Error Message")
         Finally
             Form1.txtfirst.Clear()
             Form1.txtlast.Clear()
@@ -147,12 +147,12 @@ Module Module1
         sqlquery = "DELETE FROM student where studID=@studID"
         Try
             Using cmd As New MySqlCommand(sqlquery, con)
-                cmd.Parameters.AddWithValue("@stuidID", studid)
+                cmd.Parameters.AddWithValue("@studID", studid)
                 cmd.ExecuteNonQuery()
                 MsgBox("Delete Success", vbInformation, "delete Message")
             End Using
         Catch ex As Exception
-            MsgBox("Error: " & ex.Message, vbInformation, "Error Message")
+            MsgBox("Error: " & ex.InnerException.Message, vbInformation, "Error Message")
         Finally
             Form1.txtfirst.Clear()
             Form1.txtlast.Clear()
