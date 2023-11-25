@@ -1,8 +1,7 @@
-﻿Imports System.Runtime.Versioning
-Imports System.Security.Cryptography.X509Certificates
-Imports K4os.Compression.LZ4.Streams
+﻿Imports K4os.Compression.LZ4.Streams
 Imports Microsoft.VisualBasic.Devices
 Imports MySql.Data.MySqlClient
+
 Module Module1
     Dim con As New MySqlConnection
     Dim reader As MySqlDataReader
@@ -11,7 +10,6 @@ Module Module1
     Dim sqlquery As String
     Dim dtTable As New DataTable
     Dim adapter As New MySqlDataAdapter
-    Dim testtext As String
     Public Sub ConnectDbase()
         host = "127.0.0.1"
         dbname = "cs2aoop"
